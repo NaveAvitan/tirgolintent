@@ -1,5 +1,6 @@
 package com.example.tirgolintent;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -28,7 +29,11 @@ TextView tvSOUL;
         numA= rnd.nextInt(100)+1;
         numB= rnd.nextInt(100)+1;
         numC= rnd.nextInt(100)+1;
-
+        Intent si= new Intent(this,Main3Activity.class);
+        si.putExtra("n", numA);
+        si.putExtra("nn", numB);
+        si.putExtra("nnn", numC);
+        startActivity(si);
     }
 
     public void DoThis(View view) {
@@ -38,5 +43,11 @@ TextView tvSOUL;
         numB= Integer.parseInt(stB);
         String stC= c.getText().toString();
         numC= Integer.parseInt(stC);
+        Intent si= new Intent(this,Main3Activity.class);
+        si.putExtra("n", numA);
+        si.putExtra("nn", numB);
+        si.putExtra("nnn", numC);
+        startActivity(si);
+
     }
 }
