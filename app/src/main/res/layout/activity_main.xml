@@ -7,9 +7,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/tvSOUL"
+        android:layout_width="match_parent"
+        android:layout_height="123dp"
+        android:text="the solution:" />
+
     <Space
         android:layout_width="match_parent"
-        android:layout_height="259dp" />
+        android:layout_height="121dp" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,7 +23,7 @@
         android:orientation="horizontal">
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/editTextA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -26,7 +32,7 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/editTextB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -35,7 +41,7 @@
             android:inputType="numberDecimal" />
 
         <EditText
-            android:id="@+id/editText3"
+            android:id="@+id/editTextC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -57,13 +63,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="RandomNow"
             android:text="Random" />
 
         <Button
-            android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="DoThis"
             android:text="Solution" />
     </LinearLayout>
 </LinearLayout>
