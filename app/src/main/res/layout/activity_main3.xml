@@ -23,5 +23,6 @@
     <Button
         android:layout_width="169dp"
         android:layout_height="62dp"
-        android:text="Back" />
+        android:text="Back"
+        android:onClick="backPlz"/>
 </LinearLayout>

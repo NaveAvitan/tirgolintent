@@ -34,6 +34,10 @@ TextView tvSOUL;
         si.putExtra("nn", numB);
         si.putExtra("nnn", numC);
         startActivity(si);
+        Intent ti = getIntent();
+        int x1 = ti.getIntExtra("n",1);
+        int x2 = ti.getIntExtra("nn",2);
+        tvSOUL.setText(" youre reaults are: "+ x1 +"and" +x2);
     }
 
     public void DoThis(View view) {
@@ -48,6 +52,10 @@ TextView tvSOUL;
         si.putExtra("nn", numB);
         si.putExtra("nnn", numC);
         startActivity(si);
+        Intent ti = getIntent();
+        int x1 = ti.getIntExtra("n",1);
+        int x2 = ti.getIntExtra("nn",2);
+        tvSOUL.setText(" youre reaults are: "+ x1 +"and" +x2);
 
     }
 }
