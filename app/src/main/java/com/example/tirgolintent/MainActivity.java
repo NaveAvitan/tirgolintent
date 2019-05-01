@@ -34,10 +34,7 @@ TextView tvSOUL;
         si.putExtra("nn", numB);
         si.putExtra("nnn", numC);
         startActivity(si);
-        Intent ti = getIntent();
-        int x1 = ti.getIntExtra("n",1);
-        int x2 = ti.getIntExtra("nn",2);
-        tvSOUL.setText(" youre reaults are: "+ x1 +"and" +x2);
+
     }
 
     public void DoThis(View view) {
@@ -47,15 +44,23 @@ TextView tvSOUL;
         numB= Integer.parseInt(stB);
         String stC= c.getText().toString();
         numC= Integer.parseInt(stC);
-        Intent si= new Intent(this,Main3Activity.class);
-        si.putExtra("n", numA);
-        si.putExtra("nn", numB);
-        si.putExtra("nnn", numC);
-        startActivity(si);
+        Intent gi= new Intent(this,Main3Activity.class);
+        gi.putExtra("n", numA);
+        gi.putExtra("nn", numB);
+        gi.putExtra("nnn", numC);
+        startActivity(gi);
+
+
+    }
+
+    public void doplz(View view) {
         Intent ti = getIntent();
         int x1 = ti.getIntExtra("n",1);
         int x2 = ti.getIntExtra("nn",2);
+        if ((x1 != 0)&&( x2 != 0)){
         tvSOUL.setText(" youre reaults are: "+ x1 +"and" +x2);
-
     }
-}
+    else {
+        tvSOUL.setText("we still dont have a soulotion");
+        }
+} }
