@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -13,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 EditText a;
 EditText b;
 EditText c;
-int numA,numB,numC;
+double numA,numB,numC;
 Random rnd= new Random();
 TextView tvSOUL;
     @Override
@@ -26,32 +27,29 @@ TextView tvSOUL;
     }
 
     public void RandomNow(View view) {
-        numA= rnd.nextInt(100)+1;
-        numB= rnd.nextInt(100)+1;
-        numC= rnd.nextInt(100)+1;
-        Intent si= new Intent(this,Main3Activity.class);
-        si.putExtra("n", numA);
-        si.putExtra("nn", numB);
-        si.putExtra("nnn", numC);
-        startActivity(si);
-
+        a.setText(rnd.nextInt(100)+1+rnd.nextDouble()+"");
+        b.setText(rnd.nextInt(100)+1+rnd.nextDouble()+"");
+        c.setText(rnd.nextInt(100)+1+rnd.nextDouble()+"");
     }
 
     public void DoThis(View view) {
         String stA= a.getText().toString();
-        numA= Integer.parseInt(stA);
+        numA= Double.parseDouble(stA);
         String stB= b.getText().toString();
-        numB= Integer.parseInt(stB);
+        numB= Double.parseDouble(stB);
         String stC= c.getText().toString();
-        numC= Integer.parseInt(stC);
+        numC= Double.parseDouble(stC);
+        if ((stA.equals(""))||(stB.equals("")) || (stC.equals(""))|| ( stA.equals("-")) || ( stB.equals("-")) || ( stC.equals("-")) || ( stA.equals(".")) || ( stB.equals(".")) || ( stC.equals(".")) || ( stA.equals("+")) || ( stB.equals("+")) || ( stC.equals("+")) ){
+            Toast.makeText( this,"do this good or dont do this at all",Toast.LENGTH_SHORT).show(); }
+            else {
         Intent gi= new Intent(this,Main3Activity.class);
         gi.putExtra("n", numA);
         gi.putExtra("nn", numB);
         gi.putExtra("nnn", numC);
-        startActivity(gi);
+        startActivityForResult(gi,1);
 
 
-    }
+    } }
 
     public void doplz(View view) {
         Intent ti = getIntent();

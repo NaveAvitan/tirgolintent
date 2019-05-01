@@ -29,7 +29,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="A"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal|numberSigned" />
 
         <EditText
             android:id="@+id/editTextB"
@@ -38,7 +38,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="B"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal|numberSigned" />
 
         <EditText
             android:id="@+id/editTextC"
@@ -47,7 +47,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:hint="C"
-            android:inputType="numberDecimal" />
+            android:inputType="numberDecimal|numberSigned" />
     </LinearLayout>
 
     <Space

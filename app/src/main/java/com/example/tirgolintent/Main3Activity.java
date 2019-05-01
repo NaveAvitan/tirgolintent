@@ -13,15 +13,15 @@ import android.widget.TextView;
 
 
 public class Main3Activity extends AppCompatActivity {
-    Intent gi = getIntent();
+    Intent gi ;
     double x1 = gi.getIntExtra("n", 1);
     double x2 = gi.getIntExtra("nn", 2);
     double x3 = gi.getIntExtra("nnn", 1);
     WebView wb1;
     TextView tv23;
     String url2 = "https://www.google.co.il/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=" + x1 + "x%5E2%2B" + x2 + "x%2b" + x3;
-    double x11 = (-x2 + Math.sqrt(x2 * x2  + 4 * x1 * x3)) * 0.5;
-    double x12 = (-x2 - Math.sqrt(x2 * x2 + 4 * x1 * x3)) * 0.5;
+    double x11 = (-x2 + Math.sqrt(x2 * x2  + 4 * x1 * x3))/ (2*x1);
+    double x12 = (-x2 - Math.sqrt(x2 * x2 + 4 * x1 * x3)) /( 2* x1);
 
     @Override
 
