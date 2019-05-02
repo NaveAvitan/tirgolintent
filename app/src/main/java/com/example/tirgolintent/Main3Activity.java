@@ -11,9 +11,8 @@ import android.widget.TextView;
 
 
 
-
 public class Main3Activity extends AppCompatActivity {
-    Intent gi ;
+    Intent gi = getIntent();
     double x1 = gi.getIntExtra("n", 1);
     double x2 = gi.getIntExtra("nn", 2);
     double x3 = gi.getIntExtra("nnn", 1);
